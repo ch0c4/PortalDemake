@@ -1,0 +1,79 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Resources/nasa_16.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Scripts/Credits.cs" type="Script" id=2]
+[ext_resource path="res://Assets/Portal_Still-Alive.ogg" type="AudioStream" id=3]
+
+[node name="Credits" type="MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = -10.0
+script = ExtResource( 2 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_right = 300.0
+margin_bottom = 220.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 300.0
+margin_bottom = 220.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+margin_right = 300.0
+margin_bottom = 220.0
+size_flags_horizontal = 3
+custom_constants/separation = 0
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_right = 300.0
+margin_bottom = 20.0
+size_flags_vertical = 2
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.254902, 0.584314, 0.603922, 1 )
+text = "Thanks For Playing"
+align = 1
+uppercase = true
+
+[node name="Created" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 55.0
+margin_right = 300.0
+margin_bottom = 110.0
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.254902, 0.584314, 0.603922, 1 )
+text = "Created by : Ch0c4"
+align = 1
+
+[node name="Assets" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 110.0
+margin_right = 300.0
+margin_bottom = 165.0
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.254902, 0.584314, 0.603922, 1 )
+text = "Assets by : Ch0c4"
+align = 1
+
+[node name="Music" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 165.0
+margin_right = 300.0
+margin_bottom = 220.0
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.254902, 0.584314, 0.603922, 1 )
+text = "Music And SFX :
+Youtube & Others"
+align = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+autoplay = true

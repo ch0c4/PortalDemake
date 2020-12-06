@@ -1,0 +1,3 @@
+[gd_scene format=2]
+
+[node name="HitSound" type="AudioStreamPlayer2D"]

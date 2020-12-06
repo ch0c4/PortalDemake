@@ -1,0 +1,6 @@
+
+.import/
+.vscode/
+
+# Mono-specific ignores
+.mono/

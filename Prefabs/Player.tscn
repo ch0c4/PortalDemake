@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/player_1bit.png" type="Texture" id=1]
+[ext_resource path="res://Assets/AttackSound.wav" type="AudioStream" id=2]
+[ext_resource path="res://Scripts/Player.cs" type="Script" id=3]
+
+[sub_resource type="CapsuleShape2D" id=1]
+height = 0.0
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 4.63959, 4.87108 )
+
+[node name="Player" type="KinematicBody2D"]
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+rotation = -1.5708
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Muzzle" type="Position2D" parent="."]
+position = Vector2( 11.984, 3.08931 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CubeContainer" type="Position2D" parent="."]
+position = Vector2( 22.0192, 2.83654 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="CubeContainer"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CubeContainer/Area2D"]
+shape = SubResource( 2 )
+
+[node name="AttackSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 2 )
+[connection signal="body_entered" from="CubeContainer/Area2D" to="." method="_on_CubeContainer_body_entered"]
+[connection signal="body_exited" from="CubeContainer/Area2D" to="." method="_on_CubeContainer_body_exited"]

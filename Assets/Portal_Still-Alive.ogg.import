@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Portal_Still-Alive.ogg-cedbfd38193202aafbc461e4c01cc72a.oggstr"
+
+[deps]
+
+source_file="res://Assets/Portal_Still-Alive.ogg"
+dest_files=[ "res://.import/Portal_Still-Alive.ogg-cedbfd38193202aafbc461e4c01cc72a.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Portal2_Want_You_Gone.ogg-5c91cf7c7632d375bee5ce3d78ffce17.oggstr"
+
+[deps]
+
+source_file="res://Assets/Portal2_Want_You_Gone.ogg"
+dest_files=[ "res://.import/Portal2_Want_You_Gone.ogg-5c91cf7c7632d375bee5ce3d78ffce17.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
